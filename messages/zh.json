@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "title": "首页",
+    "about": "关于我们"
+  },
+  "LoginPage": {
+    "title": "登录",
+    "description": "请使用以下方式登录您的账号",
+    "continueWithGoogle": "使用 Google 账号登录",
+    "continueWithGithub": "使用 Github 账号登录",
+    "orContinueWith": "或者使用",
+    "loginError": "认证失败，使用 {provider} 登录时发生错误"
+  }
+}

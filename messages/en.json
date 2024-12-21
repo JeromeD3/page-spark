@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
+  "LoginPage": {
+    "title": "Login",
+    "description": "Enter your email below to login to your account",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithGithub": "Continue with Github",
+    "orContinueWith": "Or continue with",
+    "loginError": "Authentication failed, An error occurred while logging in with {provider}"
+  }
+}
