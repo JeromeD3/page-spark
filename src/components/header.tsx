@@ -9,11 +9,14 @@ import {
   DropdownItem,
   DropdownTrigger,
   Dropdown,
+  Link,
 } from "@nextui-org/react";
 import { useSession, signOut } from "next-auth/react";
-import { Link } from "@/i18n/routing";
+
 import { ThemeSwitch } from "./theme-switch";
 import { I18nSwitch } from "./i18n-switch";
+import Image from "next/image";
+
 
 export function Header() {
   const { data: session } = useSession();
@@ -21,8 +24,8 @@ export function Header() {
   return (
     <Navbar>
       <NavbarBrand>
-        <Link href="/" className="font-bold text-inherit">
-          My App
+        <Link href="/" color="foreground" className="font-bold flex items-center  justify-center gap-2">
+          <Logo />
         </Link>
       </NavbarBrand>
 
@@ -64,4 +67,17 @@ export function Header() {
       </NavbarContent>
     </Navbar>
   );
+}
+
+
+const Logo = () => {
+  return <>
+    <Image
+      src="/logo.png"
+      alt="Page Spark Logo"
+      width={32}
+      height={32}
+      className="text-black dark:text-white"
+    />
+    <h1 className="text-lg">Page Spark</h1></>
 }

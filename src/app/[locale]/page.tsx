@@ -1,12 +1,24 @@
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
+import { type Metadata } from "next";
+import Image from "next/image";
 
 interface Props {
   params: Promise<{
     locale: string;
   }>;
 }
+
+export async function generateMetadata(): Promise<Metadata> {
+
+  return {
+    title:"Page Spark",
+    description: "Light up the creative spark of Landing Page",
+    keywords: "ai"
+  };
+}
+
 export default async function HomePage({ params }: Props) {
   const t = await getTranslations("HomePage");
   const { locale } = await params;
@@ -25,6 +37,14 @@ export default async function HomePage({ params }: Props) {
         >
           登录
         </Link>
+
+        <Image
+          src="/logo.png"
+          alt="Page Spark Logo"
+          width={32}
+          height={32}
+          className="text-black dark:text-white"
+        />
       </div>
     </main>
   );
