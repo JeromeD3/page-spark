@@ -1,5 +1,5 @@
+import { LoginButtons } from "@/components/login-buttons";
 import { type Metadata } from "next";
-import { LoginButtons } from "./components/login-buttons";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {

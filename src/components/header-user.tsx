@@ -11,7 +11,6 @@ import {
 import React from "react";
 import { useSession, signOut } from "next-auth/react";
 import { Link } from "@/i18n/routing";
-import { Icon } from "@iconify/react";
 
 const HeaderUser = () => {
   const { data: session } = useSession();
@@ -40,13 +39,7 @@ const HeaderUser = () => {
     </Dropdown>
   ) : (
     <Link href="/auth/login">
-      <Button
-        className="bg-foreground font-medium text-background"
-        color="secondary"
-        endContent={<Icon icon="solar:alt-arrow-right-linear" />}
-        radius="full"
-        variant="flat"
-      >
+      <Button className="text-default-500" radius="full" variant="light">
         Login
       </Button>
     </Link>

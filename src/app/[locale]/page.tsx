@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { type Metadata } from "next";
 import Image from "next/image";
+import Hero from "@/components/Index/Hero";
 
 interface Props {
   params: Promise<{
@@ -24,27 +25,8 @@ export default async function HomePage({ params }: Props) {
 
   setRequestLocale(locale);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <div>
-          <h1>{t("title")}</h1>
-        </div>
-
-        <Link
-          href="/auth/login"
-          className="rounded-xl px-8 py-4 text-xl font-bold"
-        >
-          登录
-        </Link>
-
-        <Image
-          src="/logo.png"
-          alt="Page Spark Logo"
-          width={32}
-          height={32}
-          className="text-black dark:text-white"
-        />
-      </div>
+    <main className="flex flex-col items-center justify-center">
+      <Hero />
     </main>
   );
 }

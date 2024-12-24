@@ -6,6 +6,7 @@ import { Header } from "@/components/header";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Page Spark",
@@ -40,6 +41,7 @@ export default async function RootLayout({
           <Providers>
             <Header />
             {children}
+            <Footer />  
           </Providers>
         </NextIntlClientProvider>
       </body>

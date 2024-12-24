@@ -1,7 +1,6 @@
 "use client";
 import { ThemeSwitch } from "./theme-switch";
 import { I18nSwitch } from "./i18n-switch";
-import Image from "next/image";
 import { useState } from "react";
 import HeaderUser from "./header-user";
 import {
@@ -16,19 +15,16 @@ import {
   NavbarProps,
 } from "@nextui-org/react";
 import { cn } from "@nextui-org/react";
+import { menuItems } from "@/lib/config";
+import LogoWithText from "./logo-with-text";
 
-const menuItems = [
-  { name: "Home", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Products", href: "#", isActive: true },
-  { name: "About Us", href: "#" },
-];
 
 export function Header(props: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Navbar
+      maxWidth="xl"
       {...props}
       isBordered
       classNames={{
@@ -38,7 +34,7 @@ export function Header(props: NavbarProps) {
         wrapper: "w-full justify-center",
         item: "hidden md:flex",
       }}
-      height="60px"
+      height="70px"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
@@ -49,8 +45,7 @@ export function Header(props: NavbarProps) {
         />
 
         <NavbarBrand>
-          <Logo />
-          <span className="ml-2 text-lg font-bold">Page Spark</span>
+          <LogoWithText />
         </NavbarBrand>
       </NavbarContent>
 
@@ -101,14 +96,3 @@ export function Header(props: NavbarProps) {
   );
 }
 
-const Logo = () => {
-  return (
-    <Image
-      src="/logo.png"
-      alt="Page Spark Logo"
-      width={32}
-      height={32}
-      className="text-black dark:text-white"
-    />
-  );
-};
