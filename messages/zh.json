@@ -1,7 +1,6 @@
 {
   "HomePage": {
-    "title": "首页",
-    "about": "关于我们"
+    "title": "首页"
   },
   "LoginPage": {
     "title": "登录",

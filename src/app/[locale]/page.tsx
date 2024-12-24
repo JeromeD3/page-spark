@@ -11,11 +11,10 @@ interface Props {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-
   return {
-    title:"Page Spark",
+    title: "Page Spark",
     description: "Light up the creative spark of Landing Page",
-    keywords: "ai"
+    keywords: "ai",
   };
 }
 

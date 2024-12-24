@@ -10,11 +10,13 @@ import { routing } from "@/i18n/routing";
 export const metadata: Metadata = {
   title: "Page Spark",
   description: "Light up the creative spark of Landing Page",
-  icons: [{
-    rel: "icon",
-    url: "/logo.png",
-    type: "image/svg+xml"
-  }],
+  icons: [
+    {
+      rel: "icon",
+      url: "/logo.png",
+      type: "image/svg+xml",
+    },
+  ],
 };
 
 export function generateStaticParams() {
