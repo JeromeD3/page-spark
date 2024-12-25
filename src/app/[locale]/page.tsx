@@ -3,7 +3,6 @@ import { setRequestLocale } from "next-intl/server";
 import { type Metadata } from "next";
 import Hero from "@/components/Index/Hero";
 import Features from "@/components/Index/Features";
-import WorldMap from "@/components/Index/WorldMap";
 
 interface Props {
   params: Promise<{
@@ -28,7 +27,6 @@ export default async function HomePage({ params }: Props) {
     <main className="flex flex-col items-center justify-center">
       <Hero />
       <Features />
-      <WorldMap />
     </main>
   );
 }

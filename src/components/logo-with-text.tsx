@@ -13,7 +13,7 @@ const LogoWithText = () => {
         height={32}
         className="text-black dark:text-white"
       />
-      <span className="ml-2 text-lg font-bold text-black dark:text-white">Page Spark</span>
+      <span className="ml-2 text-lg font-bold text-black dark:text-white">PageSpark</span>
     </Link>
   );
 
