@@ -1,47 +1,67 @@
-import React from 'react'
-import { Link } from '@nextui-org/link'
-import LogoWithText from './logo-with-text'
-import { menuItems, socialLinks } from '@/lib/config'
+import React from "react";
+import { Link } from "@nextui-org/link";
+import LogoWithText from "./logo-with-text";
+import { menuItems, socialLinks } from "@/lib/config";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-6 py-12 lg:px-8 ">
-      <LogoWithText />
+    <>
+      <footer className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-6 py-12 lg:px-8">
+        <LogoWithText />
 
-      <span aria-hidden="true" className="block h-px w-px" style={{ marginLeft: '0.25rem', marginTop: '1rem' }} />
+        <span
+          aria-hidden="true"
+          className="block h-px w-px"
+          style={{ marginLeft: "0.25rem", marginTop: "1rem" }}
+        />
 
-      <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-        {menuItems.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className="text-small text-default-500 transition-opacity hover:opacity-80"
-          >
-            {link.name}
-          </Link>
-        ))}
-      </div>
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
+          {menuItems.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-small text-default-500 transition-opacity hover:opacity-80"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
 
-      <span aria-hidden="true" className="block h-px w-px" style={{ marginLeft: '0.25rem', marginTop: '1.5rem' }} />
+        <span
+          aria-hidden="true"
+          className="block h-px w-px"
+          style={{ marginLeft: "0.25rem", marginTop: "1.5rem" }}
+        />
 
-      <div className="flex justify-center gap-x-4">
-        {socialLinks.map((link) => (
-          <Link
-            key={link.name}
-            href={link.href}
-            className="text-medium text-default-400 transition-opacity hover:opacity-80"
-          >
-            <span className="sr-only">{link.name}</span>
-            {link.icon}
-          </Link>
-        ))}
-      </div>
+        <div className="flex justify-center gap-x-4">
+          {socialLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-medium text-default-400 transition-opacity hover:opacity-80"
+            >
+              <span className="sr-only">{link.name}</span>
+              {link.icon}
+            </Link>
+          ))}
+        </div>
 
-      <span aria-hidden="true" className="block h-px w-px" style={{ marginLeft: '0.25rem', marginTop: '1rem' }} />
+        <span
+          aria-hidden="true"
+          className="block h-px w-px"
+          style={{ marginLeft: "0.25rem", marginTop: "1rem" }}
+        />
 
-      <p className="mt-1 text-center text-small text-default-400">© 2024 Page Spark. All rights reserved.</p>
-    </footer>
-  )
-}
+        <p className="mt-1 text-center text-small text-default-400">
+          © 2024 Page Spark. All rights reserved.
+        </p>
+      </footer>
 
-export default Footer
+      <p className="inset-x-0 bg-gradient-to-b from-neutral-50 to-neutral-200 bg-clip-text text-center text-5xl font-bold text-transparent dark:from-neutral-950 dark:to-neutral-800 md:text-9xl lg:text-[18rem]">
+        PAGE SPARK
+      </p>
+    </>
+  );
+};
+
+export default Footer;

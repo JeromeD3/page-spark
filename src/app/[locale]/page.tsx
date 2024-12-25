@@ -1,9 +1,9 @@
-import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { type Metadata } from "next";
-import Image from "next/image";
 import Hero from "@/components/Index/Hero";
+import Features from "@/components/Index/Features";
+import WorldMap from "@/components/Index/WorldMap";
 
 interface Props {
   params: Promise<{
@@ -27,6 +27,8 @@ export default async function HomePage({ params }: Props) {
   return (
     <main className="flex flex-col items-center justify-center">
       <Hero />
+      <Features />
+      <WorldMap />
     </main>
   );
 }
