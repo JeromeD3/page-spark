@@ -97,7 +97,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] 
         ))}
       </div>
       
-      <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm md:text-base leading-relaxed">"{testimonial.content}"</p>
+      <p className="text-gray-700 dark:text-gray-300 mb-6 text-sm md:text-base leading-relaxed">{testimonial.content}</p>
       
       <div className="flex items-center">
         <div className="w-12 h-12 relative rounded-full overflow-hidden mr-4 ring-2 ring-white dark:ring-zinc-700/50 group-hover:ring-blue-100 dark:group-hover:ring-zinc-500 transition-all shadow-md">
