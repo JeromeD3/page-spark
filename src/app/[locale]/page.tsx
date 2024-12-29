@@ -2,8 +2,11 @@ import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 import { type Metadata } from "next";
 import Hero from "@/components/Index/Hero";
-import Features from "@/components/Index/Features";
 import Stack from "@/components/Index/Stack";
+import CTA from "@/components/Index/CTA";
+import FAQ from "@/components/Index/FAQ";
+import Testimonial from "@/components/Index/Testimonial";
+import Pricing from "@/components/Index/Pricing";
 interface Props {
   params: Promise<{
     locale: string;
@@ -26,8 +29,11 @@ export default async function HomePage({ params }: Props) {
   return (
     <main className="flex flex-col items-center justify-center">
       <Hero />
-      <Features />
       <Stack />
+      <Pricing />
+      <Testimonial />  
+      <FAQ />
+      <CTA />
     </main>
   );
 }
